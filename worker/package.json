@@ -8,17 +8,6 @@
     "start": "node index.js",
     "dev": "nodemon"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dquez/docker-fib-calculator.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dquez/docker-fib-calculator/issues"
-  },
-  "homepage": "https://github.com/Dquez/docker-fib-calculator#readme",
   "dependencies": {
     "nodemon": "1.18.3",
     "redis": "2.8.0"
