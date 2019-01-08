@@ -1,4 +1,4 @@
-const keys = require('keys');
+const keys = require('./keys');
 const redis = require('redis');
 const {Pool} = require('pg');
 // Express set up
