@@ -9,7 +9,8 @@
         "pg": "7.4.3",
         "redis": "2.8.0",
         "cors":"2.8.4",
-        "nodemon": "1.18.3"
+        "nodemon": "1.18.3",
+        "body-parser": "*"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
