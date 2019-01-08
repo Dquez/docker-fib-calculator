@@ -1,9 +1,9 @@
 const keys = require('./keys');
 const redis = require('redis');
-const redisClient = redis.RedisClient({
+const redisClient = redis.createClient({
     host: keys.redisHost,
     port: keys.redisPort,
-    retryStrategy: ()=> 1000
+    retry_strategy: () => 1000
 })
 
 const sub = redisClient.duplicate();
@@ -16,7 +16,7 @@ function fib(index){
 sub.on('message', (channel, message)=>{
     // hset hashes the values, message received is what the user entered into the form
     // set the key to the message and the value to the result of the int message, which will be an index
-    redisClinet.hset('values', message, fib(parseInt(message)));
+    redisClient.hset('values', message, fib(parseInt(message)));
 })
 
 sub.subscribe('insert');
