@@ -3,18 +3,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t dariellv/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t dquez/react-test -f ./client/Dockerfile.dev ./client
 
 script: 
-  - docker run dariellv/react-test npm test -- --coverage
+  - docker run dquez/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t dariellv/multi-client ./client
-  - docker build -t dariellv/multi-nginx ./nginx
-  - docker build -t dariellv/multi-api ./api
-  - docker build -t dariellv/multi-worker ./worker
+  - docker build -t dquez/multi-client ./client
+  - docker build -t dquez/multi-nginx ./nginx
+  - docker build -t dquez/multi-api ./api
+  - docker build -t dquez/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push dariellv/multi-client
-  - docker push dariellv/multi-nginx
-  - docker push dariellv/multi-api
-  - docker push dariellv/multi-worker 
+  - docker push dquez/multi-client
+  - docker push dquez/multi-nginx
+  - docker push dquez/multi-api
+  - docker push dquez/multi-worker 
