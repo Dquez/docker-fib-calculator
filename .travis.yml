@@ -18,3 +18,16 @@ after_success:
   - docker push dquez/multi-nginx
   - docker push dquez/multi-api
   - docker push dquez/multi-worker 
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-1-172287926365
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
