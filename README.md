@@ -36,7 +36,7 @@ I could've created this app with no backend, but I wanted to challenge myself to
 ## Accomplishments that I'm proud of
 Taking a simple application and deploying it dockerhub and AWS was extremely rewarding. Although my devops chops are budding, I'm glad I got the chance to dive under the hood to figure out what's happening during the deployment process for cloud providers.  
 
-## What's next for Rembr
+## What's next for Docker-fib-calculator
 Since I've already built this application to scale, I'd like to update the design so the app isn't so rough around the edges. Possibly even simplify the application or make it more of a boilerplate to deploy a web app to cloud service providers using kubernetes.
 
 ## Author
